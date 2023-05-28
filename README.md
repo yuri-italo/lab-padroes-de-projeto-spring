@@ -60,6 +60,11 @@ Certifique-se de ter o seguinte software instalado em sua máquina:
    ```
    mvn spring-boot:run
    ```
+   
+## Importar a Collection
+
+Para acessar os métodos HTTP da API através da collection do Postman, você pode importar o arquivo disponibilizado neste link: [Collection](https://drive.google.com/file/d/1m3T21rIGaZgsL7ziOjIfAJ6iPf_h8RNE/view).
+
 
 ## Contribuição
 
