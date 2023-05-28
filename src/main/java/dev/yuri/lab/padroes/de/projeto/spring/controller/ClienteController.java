@@ -34,19 +34,19 @@ public class ClienteController {
 
     @PostMapping
     public ResponseEntity<Cliente> inserir(@RequestBody Cliente cliente) {
-        clienteService.inserir(cliente);
-        return ResponseEntity.ok(cliente);
+        Cliente clienteSalvo = clienteService.inserir(cliente);
+        return ResponseEntity.ok(clienteSalvo);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Cliente> atualizar(@PathVariable Long id, @RequestBody Cliente cliente) {
-        clienteService.atualizar(id, cliente);
-        return ResponseEntity.ok(cliente);
+        Cliente clienteAtualizado = clienteService.atualizar(id, cliente);
+        return ResponseEntity.ok(clienteAtualizado);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id) {
         clienteService.deletar(id);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.noContent().build();
     }
 }
